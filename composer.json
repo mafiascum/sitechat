@@ -1,0 +1,26 @@
+{
+    "name": "mafiascum/siteChat",
+    "type": "phpbb-extension",
+    "description": "Mafiascum Site Chat",
+    "homepage": "https://github.com/mafiascum/siteChat",
+    "version": "0.1.0",
+    "time": "2017-10-01",
+    "license": "GPL-2.0",
+    "authors": [{
+	"name": "Charlie Ciccia",
+	"email": "cciccia@gmail.com",
+	"homepage": "https://github.com/cciccia/",
+	"role": "Omerta"
+    }],
+    "require": {
+	"php": ">=5.3.3",
+	"composer/installers": "~1.0",
+        "phpbb/phpbb": ">=3.1.0-a2"
+    },
+    "extra": {
+        "display-name": "Site Chat",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0-a2"
+        }
+    }
+}

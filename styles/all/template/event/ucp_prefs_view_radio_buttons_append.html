@@ -1,0 +1,23 @@
+<dl>
+  <dt><label for="chat_enabled1">{{ lang('ENABLE_CHAT') }}{{ lang('COLON') }}</label></dt>
+  <dd>
+    <label for="chat_enabled1">
+      <input type="radio" name="chat_enabled" id="chat_enabled1" value="1" {% if S_CHAT %} checked="checked" {% endif %} /> {{ lang('YES') }}
+    </label>
+    <label for="chat_enabled0">
+      <input type="radio" name="chat_enabled" id="chat_enabled0" value="0" {% if not S_CHAT %} checked="checked" {% endif %} /> {{ lang('NO') }}
+    </label>
+  </dd>
+</dl>
+
+<dl>
+  <dt><label for="enterlobby1">{{ lang('ENTER_LOBBY') }}{{ lang('COLON') }}</label></dt>
+  <dd>
+    <label for="enterlobby1">
+      <input type="radio" name="enterlobby" id="enterlobby1" value="1" {% if S_LOBBY %} checked="checked" {% endif %} /> {{ lang('YES') }}
+    </label>
+    <label for="enterlobby0">
+      <input type="radio" name="enterlobby" id="enterlobby0" value="0" {% if not S_LOBBY %} checked="checked" {% endif %} /> {{ lang('NO') }}
+    </label>
+  </dd>
+</dl>

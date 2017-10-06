@@ -1,0 +1,10 @@
+services:
+    mafiascum.siteChat.listener:
+        class: mafiascum\siteChat\event\main_listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+            - '@request'
+            - '@user'
+        tags:
+            - { name: event.listener }
