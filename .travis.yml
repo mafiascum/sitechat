@@ -1,0 +1,17 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull mafiascum/forum-db:skeleton
+  - docker run -d --name test_database -e MYSQL_ROOT_PASSWORD=password mafiascum/forum-db:skeleton
+  - docker pull mafiascum/forum-tester:latest
+
+script:
+    - docker run -it --link test_database -v $PWD:/var/www/html/phpbb/phpBB/ext/mafiascum/siteChat/ -e PHPBB_TEST_DBMS=mysqli -e PHPBB_TEST_DBHOST=test_database -e PHPBB_TEST_DBPORT=3306 -e PHPBB_TEST_DBNAME=ms_phpbb3 -e PHPBB_TEST_DBUSER=root -e PHPBB_TEST_DBPASSWD=password mafiascum/forum-tester:latest phpBB/ext/mafiascum/siteChat/phpunit.xml.dist
+
+after_success:
+  - test $TRAVIS_BRANCH = "develop" && test $TRAVIS_PULL_REQUEST = "false" && curl "http://$JENKINS_HOST/buildByToken/build?job=mafiascum-staging&token=$JENKINS_TOKEN"
+
+  
