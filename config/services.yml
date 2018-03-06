@@ -8,3 +8,9 @@ services:
             - '@user'
         tags:
             - { name: event.listener }
+    mafiascum.siteChat.toggleSiteChatController:
+        class: mafiascum\siteChat\controller\toggleSiteChat
+        arguments:
+            - '@request'
+            - '@user'
+            - '@dbal.conn'

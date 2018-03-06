@@ -18,6 +18,7 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'ENABLE_CHAT' => 'Enable Chat',
-    'ENTER_LOBBY' => 'Enter Chat Lobby Automatically',
+    'DISABLE_CHAT' => 'Disable chat',
+    'ENABLE_CHAT'  => 'Enable chat',
+    'ENTER_LOBBY'  => 'Enter chat lobby automatically',
 ));
