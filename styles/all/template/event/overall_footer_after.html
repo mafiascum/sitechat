@@ -1,11 +1,11 @@
-{% if not S_IS_BOT and S_USER_LOGGED_IN and S_CHAT %}
 <script>
 $(document).ready(function(){
 	siteChat.setup("{{ SESSION_ID }}", {{ S_USER_ID }}, {{ !!S_LOBBY }},
-			"{{ SITE_CHAT_URL }}", "{{ SITE_CHAT_PROTOCOL }}", "{{ ROOT_PATH }}");
+			"{{ SITE_CHAT_URL }}", "{{ SITE_CHAT_PROTOCOL }}", "{{ ROOT_PATH }}",
+			{% if not S_IS_BOT and S_USER_LOGGED_IN and S_CHAT %}true{% else %}false{% endif %}
+	);
 });
 </script>
-{% endif %}
 
 {% INCLUDEJS '/ext/mafiascum/siteChat/styles/all/template/underscore-min.js' %}
 {% INCLUDEJS '/ext/mafiascum/siteChat/styles/all/template/handlebars-v2.0.0.js' %}

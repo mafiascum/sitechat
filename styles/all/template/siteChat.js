@@ -1177,7 +1177,7 @@ var siteChat = (function() {
 
 	siteChat.disableChat = function() {
 		xmlhttp=new XMLHttpRequest();
-		xmlhttp.open("POST","toggle_site_chat", false);
+		xmlhttp.open("POST",siteChat.rootPath+"/toggle_site_chat", false);
 		xmlhttp.send();
 		response = xmlhttp.responseText;
 		if (response == '[]'){
@@ -1641,7 +1641,7 @@ var siteChat = (function() {
 		e.preventDefault();
 		var turnOn = $(this).attr("data-toggle") == "on";
 		$.ajax({
-				url: "toggle_site_chat",
+				url: siteChat.rootPath + "/toggle_site_chat",
 				type: "post",
 				data: {chat: turnOn ? "1" : "0"},
 				success: function(response) {
@@ -1650,9 +1650,7 @@ var siteChat = (function() {
 		});
 	});
 
-	console.log("Here.");
-
-	siteChat.setup = function(sessionId, userId, autoJoinLobby, siteChatUrl, siteChatProtocol, rootPath) {
+	siteChat.setup = function(sessionId, userId, autoJoinLobby, siteChatUrl, siteChatProtocol, rootPath, enabled) {
 
 		siteChat.sessionId = sessionId;
 		siteChat.userId = userId;
@@ -1661,6 +1659,9 @@ var siteChat = (function() {
 		siteChat.siteChatProtocol = siteChatProtocol;
 		siteChat.adjustElementColor = typeof window.adjustColor === "function" ? window.adjustColor : function(){};
 		siteChat.rootPath = (rootPath || "").replace(/\/+$/, "");
+
+		if(!enabled)
+			return;
 
 		if(!supportsHtml5Storage() || (typeof(WebSocket) != "function" && typeof(WebSocket) != "object"))
 			return;
