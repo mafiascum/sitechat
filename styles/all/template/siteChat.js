@@ -1470,7 +1470,7 @@ var siteChat = (function() {
 			$password.val("");
 			$ul.html("");
 
-			$.fancybox.open("#siteChatPasswordLightbox");
+			$.fancybox.open($("#siteChatPasswordLightbox"));
 			$password.focus();
 		};
 
@@ -1724,7 +1724,7 @@ var siteChat = (function() {
 
 			$window.find(".menu").removeClass("expanded");
 
-			$.fancybox.open("#siteChatSetPasswordLightbox");
+			$.fancybox.open($("#siteChatSetPasswordLightbox"));
 
 			$password.focus();
 		});
