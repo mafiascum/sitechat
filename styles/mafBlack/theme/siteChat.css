@@ -774,7 +774,7 @@
 
 .siteChatLightbox
 {
-	width: 350px;
+	width: 400px;
 	font-size: 14px;
 }
 
@@ -785,15 +785,6 @@
 	height: 16px;
 	cursor: text;
 }
-/**
-.siteChatLightbox input[type=button],
-.siteChatLightbox input[type=submit]
-{
-	padding: 0px 5px 0px 5px;
-	font-weight: bold;
-	cursor: pointer;
-}
-**/
 
 .siteChatLightbox ul
 {

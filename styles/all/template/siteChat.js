@@ -1935,11 +1935,11 @@ var siteChat = (function() {
 	siteChat.createPasswordLightbox = function() {
 
 		if($("#siteChatPasswordLightbox").length == 0) {
-			$("body").append("<div style='display:none;'><div id='siteChatPasswordLightbox' class='siteChatLightbox'><ul></ul>The room `<span class='conversationName'></span>` requires a password.<br/><br/><form id='siteChatPasswordForm'>Password: <input type='password' name='Password' /> <input type='hidden' name='ConversationName' /> <input type='submit' class='button1'>Join Room</input></form></div</div>");
+			$("body").append("<div style='display:none;'><div id='siteChatPasswordLightbox' class='siteChatLightbox'><ul></ul>The room `<span class='conversationName'></span>` requires a password.<br/><br/><form id='siteChatPasswordForm'>Password: <input type='password' class='inputbox' name='Password' /> <input type='hidden' name='ConversationName' /> <input type='submit' class='button1' value='Join Room'/></form></div</div>");
 		}
 
 		if($("#siteChatSetPasswordLightbox").length == 0) {
-			$("body").append("<div style='display:none;'><div id='siteChatSetPasswordLightbox' class='siteChatLightbox'><ul></ul>Set password for the room `<span class='conversationName'></span>`.<br/><br/><form id='siteChatSetPasswordForm'>New Password: <input type='password' name='Password' /> <input type='hidden' name='ConversationID' /> <input type='submit' class='button1'>Set Password</input></form></div</div>");
+			$("body").append("<div style='display:none;'><div id='siteChatSetPasswordLightbox' class='siteChatLightbox'><ul></ul>Set password for the room `<span class='conversationName'></span>`.<br/><br/><form id='siteChatSetPasswordForm'>New Password: <input type='password' class='inputbox' name='Password' /> <input type='hidden' name='ConversationID' /> <input type='submit' class='button1' value='Set Password' /></form></div</div>");
 		}
 	};
 
