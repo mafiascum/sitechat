@@ -1177,7 +1177,7 @@ var siteChat = (function() {
 
 	siteChat.disableChat = function() {
 		xmlhttp=new XMLHttpRequest();
-		xmlhttp.open("POST",siteChat.rootPath+"/toggle_site_chat", false);
+		xmlhttp.open("POST",siteChat.rootPath+"/app.php/toggle_site_chat", false);
 		xmlhttp.send();
 		response = xmlhttp.responseText;
 		if (response == '[]'){
@@ -1641,7 +1641,7 @@ var siteChat = (function() {
 		e.preventDefault();
 		var turnOn = $(this).attr("data-toggle") == "on";
 		$.ajax({
-				url: siteChat.rootPath + "/toggle_site_chat",
+				url: siteChat.rootPath + "/app.php/toggle_site_chat",
 				type: "post",
 				data: {chat: turnOn ? "1" : "0"},
 				success: function(response) {
