@@ -778,19 +778,22 @@
 	font-size: 14px;
 }
 
-.siteChatLightbox input
+.siteChatLightbox input[type=text],
+.siteChatLightbox input[type=password]
 {
 	width: 100px;
 	height: 16px;
 	cursor: text;
 }
-
-.siteChatLightbox button
+/**
+.siteChatLightbox input[type=button],
+.siteChatLightbox input[type=submit]
 {
 	padding: 0px 5px 0px 5px;
 	font-weight: bold;
 	cursor: pointer;
 }
+**/
 
 .siteChatLightbox ul
 {
