@@ -526,7 +526,7 @@
 .chatWindow.expanded #onlinelistcontainer{
 	height: 263px;
 	overflow: auto;
-	background-color: white;
+	background-color: #EDDDC7;
 }
 .chatWindow #onlinelist
 {
@@ -647,12 +647,12 @@
 .chatWindow.expanded #roomstab {
 	height: 263px;
 	overflow: auto;
-	background-color: white;
+	background-color: #EDDDC7;
 }
 .chatWindow.expanded #settingstab {
 	height: 263px;
 	overflow: auto;
-	background-color: white;
+	background-color: #EDDDC7;
 }
 .chatWindow.expanded #settingstab #settingsInner {
 	margin: 10px 5px 10px 5px;
