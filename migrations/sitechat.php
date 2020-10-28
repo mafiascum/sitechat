@@ -1,8 +1,8 @@
 <?php
 
-namespace mafiascum\siteChat\migrations;
+namespace mafiascum\sitechat\migrations;
 
-class siteChat extends \phpbb\db\migration\migration
+class sitechat extends \phpbb\db\migration\migration
 {
 
     public function effectively_installed()

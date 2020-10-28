@@ -7,7 +7,7 @@
  *
  */
 
-namespace mafiascum\siteChat\event;
+namespace mafiascum\sitechat\event;
 
 /**
  * @ignore
@@ -55,7 +55,7 @@ class main_listener implements EventSubscriberInterface
     {
         $lang_set_ext = $event['lang_set_ext'];
         $lang_set_ext[] = array(
-            'ext_name' => 'mafiascum/siteChat',
+            'ext_name' => 'mafiascum/sitechat',
             'lang_set' => 'common',
         );
         $event['lang_set_ext'] = $lang_set_ext;

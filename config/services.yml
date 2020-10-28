@@ -1,6 +1,6 @@
 services:
-    mafiascum.siteChat.listener:
-        class: mafiascum\siteChat\event\main_listener
+    mafiascum.sitechat.listener:
+        class: mafiascum\sitechat\event\main_listener
         arguments:
             - '@controller.helper'
             - '@template'

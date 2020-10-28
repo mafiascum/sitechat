@@ -1,2 +1,2 @@
-# siteChat
+# sitechat
 SiteChat Extension
