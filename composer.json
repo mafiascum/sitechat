@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "Mafiascum Site Chat",
     "homepage": "https://github.com/mafiascum/sitechat",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "time": "2017-10-01",
     "license": "GPL-2.0",
     "authors": [{

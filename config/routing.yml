@@ -1,0 +1,3 @@
+toggle_site_chat_route:
+    path: /toggle_site_chat
+    defaults: { _controller: mafiascum.siteChat.toggleSiteChatController:handle }

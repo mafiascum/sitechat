@@ -1,13 +1,15 @@
-{% if not S_IS_BOT and S_USER_LOGGED_IN and S_CHAT %}
 <script>
 $(document).ready(function(){
 	siteChat.setup("{{ SESSION_ID }}", {{ S_USER_ID }}, {{ !!S_LOBBY }},
-			"{{ SITE_CHAT_URL }}", "{{ SITE_CHAT_PROTOCOL }}", "{{ ROOT_PATH }}");
+			"{{ SITE_CHAT_URL }}", "{{ SITE_CHAT_PROTOCOL }}", "{{ ROOT_PATH }}",
+			{% if not S_IS_BOT and S_USER_LOGGED_IN and S_CHAT %}true{% else %}false{% endif %}
+	);
 });
 </script>
-{% endif %}
 
-{% INCLUDEJS '/ext/mafiascum/sitechat/styles/all/template/underscore-min.js' %}
-{% INCLUDEJS '/ext/mafiascum/sitechat/styles/all/template/handlebars-v2.0.0.js' %}
-{% INCLUDEJS '/ext/mafiascum/sitechat/styles/all/template/autogrow.min.js' %}
-{% INCLUDEJS '/ext/mafiascum/sitechat/styles/all/template/siteChat.js' %}
+{% INCLUDEJS './ext/mafiascum/sitechat/styles/all/template/underscore-min.js' %}
+{% INCLUDEJS './ext/mafiascum/sitechat/styles/all/template/handlebars-v4.0.11.js' %}
+{% INCLUDEJS './ext/mafiascum/sitechat/styles/all/template/jquery.fancybox.js' %}
+{% INCLUDEJS './ext/mafiascum/sitechat/styles/all/template/autogrow.min.js' %}
+{% INCLUDEJS './ext/mafiascum/sitechat/styles/all/template/moment.min.js' %}
+{% INCLUDEJS './ext/mafiascum/sitechat/styles/all/template/siteChat.js' %}
