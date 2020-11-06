@@ -1,2 +1,9 @@
-{% INCLUDECSS './ext/mafiascum/sitechat/styles/{T_THEME_NAME}/theme/siteChat.css' %}
+{% if T_THEME_NAME == 'mafBlack' %}
+    {% INCLUDECSS './ext/mafiascum/sitechat/styles/mafBlack/theme/siteChat.css' %}
+{% elseif T_THEME_NAME == 'mafSepia' %}
+    {% INCLUDECSS './ext/mafiascum/sitechat/styles/mafSepia/theme/siteChat.css' %}
+{% elseif T_THEME_NAME == 'mafSilver' %}
+    {% INCLUDECSS './ext/mafiascum/sitechat/styles/mafSilver/theme/siteChat.css' %}
+{% endif %}
+
 {% INCLUDECSS './ext/mafiascum/sitechat/styles/all/theme/jquery.fancybox.css' %}

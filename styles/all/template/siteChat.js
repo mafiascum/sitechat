@@ -1,7 +1,7 @@
 var siteChat = (function() {
 
 	var siteChat = siteChat || {};
-	var defaultAvatar = './styles/prosilver/imageset/defaultAvatar.png';
+	var defaultAvatar = 'styles/prosilver/theme/images/no_avatar.gif';
 	var lastEmoji = false;
 
 	function supportsHtml5Storage() {
