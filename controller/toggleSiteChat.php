@@ -1,6 +1,6 @@
 <?php
 
-namespace mafiascum\siteChat\controller;
+namespace mafiascum\sitechat\controller;
 
 class toggleSiteChat
 {
@@ -9,7 +9,7 @@ class toggleSiteChat
 
     /* @var \phpbb\user */
     protected $user;
-    
+
     /* @var \phpbb\db\driver\driver */
     protected $db;
     

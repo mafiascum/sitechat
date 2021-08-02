@@ -9,7 +9,7 @@ services:
         tags:
             - { name: event.listener }
     mafiascum.siteChat.toggleSiteChatController:
-        class: mafiascum\siteChat\controller\toggleSiteChat
+        class: mafiascum\sitechat\controller\toggleSiteChat
         arguments:
             - '@request'
             - '@user'
