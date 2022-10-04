@@ -94,6 +94,7 @@ class main_listener implements EventSubscriberInterface
         $this->template->assign_vars(array(
             'SITE_CHAT_URL'      => $siteChatUrl,
             'SITE_CHAT_PROTOCOL' => $siteChatProtocol,
+            'S_SHOW_CHAT_TOGGLE' => $this->user->data['user_id'] != ANONYMOUS,
             'S_CHAT'             => $this->user->data['chat_enabled'] == 1 && $this->user->data['user_type'] != USER_INACTIVE && !$mobile,
             'S_LOBBY'            => $this->user->data['enterlobby'] == 1,
             'S_USER_ID'          => $this->user->data['user_id'],
