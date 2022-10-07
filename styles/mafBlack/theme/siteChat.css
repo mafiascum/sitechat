@@ -794,7 +794,7 @@
 	padding: 0;
 }
 
-.hidden
+.chatPanel .hidden
 {
 	display: none !important;
 }
