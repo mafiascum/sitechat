@@ -17,9 +17,6 @@
         "phpbb/phpbb": "^3.3",
         "mafiascum/privatetopics": ">=0.1.0"
     },
-    "replace": {
-        "php": "^7.1 || ^8.0"
-    },
     "extra": {
         "display-name": "Site Chat",
         "soft-require": {
