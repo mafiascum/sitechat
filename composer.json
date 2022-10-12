@@ -13,7 +13,6 @@
 	"role": "Omerta"
     }],
     "require": {
-        "php": "^7.1 || ^8.0",
         "composer/installers": "~1.0",
         "phpbb/phpbb": "^3.3",
         "mafiascum/privatetopics": ">=0.1.0"
